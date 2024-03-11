@@ -2,7 +2,6 @@ const display_1 = document.querySelector(".display_1");
 const display_2 = document.querySelector(".display_2");
 
 let combinedValue = "";
-let MAX_DIGIT_LIMIT = 22;
 
 
 function appendDigit(value) {
@@ -34,11 +33,14 @@ function appendDigit(value) {
     }
   }
 
+  
   display_1.innerHTML = combinedValue;
+  displayCurrentValue(value);
 }
 
 function isOperator(value) {
   const operators = ["+", "-", "*", "/"];
+
   return operators.includes(value);
 }
 
